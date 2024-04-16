@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "hashdb.h"
+#include "hashdb.c"
 #include "rwlocks.h"
 
 rwlock_t list_lock;
