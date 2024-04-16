@@ -1,8 +1,11 @@
+#include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
 #include "hashdb.h"
 #include "rwlocks.h"
+#include "chash.c"
+
 
 hashRecord* list;
 rwlock_t list_lock;

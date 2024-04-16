@@ -2,6 +2,14 @@
 #define RWLOCKS_H
 
 #include <pthread.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <stdlib.h>
+#include "hashdb.h"
+#include "hashdb.c"
+#include "rwlocks.h"
+
 
 typedef struct {
     pthread_mutex_t mutex;

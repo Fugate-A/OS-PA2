@@ -1,4 +1,11 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <stdlib.h>
+#include "hashdb.h"
+#include "hashdb.c"
 #include "rwlocks.h"
+
 
 void init_rwlock(rwlock_t *lock) {
     lock->readers = 0;
