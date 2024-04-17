@@ -1,19 +1,22 @@
 CC = gcc
+
 CFLAGS = -Wall -Wextra -pthread
 
-all: chash
+SRCS = chash.c hashdb.c rwlocks.c
 
-chash: chash.o hashdb.o rwlocks.o
-	$(CC) $(CFLAGS) -o $@ $^
+OBJS = $(SRCS:.c=.o)
 
-chash.o: chash.c hashdb.h rwlocks.h common.h common_threads.h
-	$(CC) $(CFLAGS) -c -o $@ $<
+TARGET = chash
 
-hashdb.o: hashdb.c hashdb.h rwlocks.h common.h common_threads.h
-	$(CC) $(CFLAGS) -c -o $@ $<
+all: $(TARGET)
 
-rwlocks.o: rwlocks.c rwlocks.h common.h common_threads.h
-	$(CC) $(CFLAGS) -c -o $@ $<
+%.o: %.c
+    $(CC) $(CFLAGS) -c $< -o $@
+
+$(TARGET): $(OBJS)
+    $(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
 
 clean:
-	rm -f chash chash.o hashdb.o rwlocks.o
+    rm -f $(OBJS) $(TARGET)
+
+.PHONY: all clean 
