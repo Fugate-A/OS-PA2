@@ -1,0 +1,9 @@
+Number of lock acquisitions: 12
+Number of lock releases: 12
+Final Table:
+53958970,John Doe,50000
+60118794,Jane Doe,41000
+71650320,Bob Smith,45900
+595880477,Jennifer Brown,49000
+3139972584,Shin Xi,45000
+4030153111,Rocky Lancaster,51000
