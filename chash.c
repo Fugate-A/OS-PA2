@@ -3,9 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "hashdb.h"
-#include "hashdb.c"
 #include "rwlocks.h"
 
+// Removed inclusion of "hashdb.c", it's unusual and unnecessary
 
 rwlock_t list_lock;
 
