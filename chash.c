@@ -34,7 +34,7 @@ void process_command(char* command, char* param1, char* param2) {
         print_list();
     }
 }
-
+    
 int main() {
     // Initialize lock
     init_rwlock(&list_lock);
